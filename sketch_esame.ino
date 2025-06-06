@@ -181,7 +181,7 @@ void checkTelegram() {
         bot.sendMessage(chat_id, "Luce spenta.", "");
       } else if (msg == "/fredda") {
         tipoLuce = "fredda";
-        bot.sendMessage(chat_id, "❄Luce fredda selezionata.", "");
+        bot.sendMessage(chat_id, "Luce fredda selezionata.", "");
       } else if (msg == "/calda") {
         tipoLuce = "calda";
         bot.sendMessage(chat_id, "Luce calda selezionata.", "");
