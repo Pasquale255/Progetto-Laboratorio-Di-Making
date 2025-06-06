@@ -61,7 +61,7 @@ void setup() {
   }
 
   client.setInsecure();
-  bot.sendMessage(CHAT_ID, "🤖 ESP32 pronto in modalità automatica.", "");
+  bot.sendMessage(CHAT_ID, "ESP32 pronto in modalità automatica.", "");
 }
 
 void loop() {
@@ -172,31 +172,31 @@ void checkTelegram() {
         manuale = true;
         fase = MANUALE_ON;
         applicaLuceManuale();
-        bot.sendMessage(chat_id, "💡 Luce accesa.", "");
+        bot.sendMessage(chat_id, "Luce accesa.", "");
       } else if (msg == "/luce_off") {
         manuale = true;
         fase = SPENTO;
         spegni();
         printDisplay("Luce spenta (manuale)");
-        bot.sendMessage(chat_id, "🔌 Luce spenta.", "");
+        bot.sendMessage(chat_id, "Luce spenta.", "");
       } else if (msg == "/fredda") {
         tipoLuce = "fredda";
-        bot.sendMessage(chat_id, "❄️ Luce fredda selezionata.", "");
+        bot.sendMessage(chat_id, "❄Luce fredda selezionata.", "");
       } else if (msg == "/calda") {
         tipoLuce = "calda";
-        bot.sendMessage(chat_id, "🔥 Luce calda selezionata.", "");
+        bot.sendMessage(chat_id, "Luce calda selezionata.", "");
       } else if (msg == "/misto") {
         tipoLuce = "misto";
-        bot.sendMessage(chat_id, "💡 Luce mista (fredda + calda) selezionata.", "");
+        bot.sendMessage(chat_id, "Luce mista (fredda + calda) selezionata.", "");
       } else if (msg == "/forte") {
         intensita = 255;
-        bot.sendMessage(chat_id, "🔆 Intensità: FORTE", "");
+        bot.sendMessage(chat_id, "Intensità: FORTE", "");
       } else if (msg == "/media") {
         intensita = 170;
-        bot.sendMessage(chat_id, "🔅 Intensità: MEDIA", "");
+        bot.sendMessage(chat_id, " Intensità: MEDIA", "");
       } else if (msg == "/bassa") {
         intensita = 85;
-        bot.sendMessage(chat_id, "🔈 Intensità: BASSA", "");
+        bot.sendMessage(chat_id, "Intensità: BASSA", "");
       }
     }
     msgCount = bot.getUpdates(bot.last_message_received + 1);
